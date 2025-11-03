@@ -1,190 +1,98 @@
-/* Reset y estilo general */
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
+    padding: 0;
     background: #000;
     color: #fff;
+    line-height: 1.6;
     overflow-x: hidden;
 }
 
 .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Header */
 header {
     text-align: center;
-    padding: 100px 20px;
-    background: #111;
-    box-shadow: 0 0 30px rgba(0,255,255,0.1);
-    border-radius: 30px;
-    margin: 30px auto;
-    animation: fadeIn 1s ease-in;
+    padding: 60px 20px;
+    background: #1a1a1a;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255,255,255,0.1);
 }
 
 header h1 {
     font-size: 3em;
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-    animation: glow 3s infinite alternate;
+    margin: 0;
+    text-shadow: 0 0 15px #fff;
 }
 
 header h2 {
-    font-weight: 400;
-    color: #aaa;
-    margin-top: 10px;
+    font-size: 1.5em;
+    color: #ccc;
+    margin: 10px 0 20px;
 }
 
-.contacto {
-    margin-top: 15px;
-}
-
-.contacto a {
-    color: #00ffff;
+header .contacto a {
+    color: #fff;
     text-decoration: none;
-    margin-left: 8px;
-}
-
-/* Secciones */
-h2 {
-    font-size: 2em;
-    border-left: 5px solid #00ffff;
-    padding-left: 10px;
-    margin-bottom: 25px;
-}
-
-/* Experiencia */
-.experiencia-card {
-    background: #1a1a1a;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 0 15px rgba(0,255,255,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.experiencia-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 25px rgba(0,255,255,0.3);
-}
-
-.actual {
-    background: #00ffff;
-    color: #000;
-    font-size: 0.8em;
-    font-weight: bold;
-    padding: 2px 8px;
-    border-radius: 8px;
-    margin-left: 10px;
-}
-
-.pasantia {
-    background: #ff9800;
-    color: #000;
-    font-size: 0.8em;
-    font-weight: bold;
-    padding: 2px 8px;
-    border-radius: 8px;
-    margin-left: 10px;
-}
-
-/* Proyectos */
-.grid-proyectos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.proyecto-card {
-    background: #1a1a1a;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0,255,255,0.15);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.proyecto-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0,255,255,0.4);
-}
-
-.proyecto-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.proyecto-card a {
-    display: inline-block;
-    margin: 15px 0;
-    padding: 10px 20px;
-    background: #00ffff;
-    color: #000;
-    font-weight: bold;
-    border-radius: 10px;
-    text-decoration: none;
+    margin-left: 5px;
     transition: 0.3s;
 }
 
-.proyecto-card a:hover {
-    background: #00cccc;
+header .contacto a:hover {
+    color: #ccc;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111;
-    font-size: 0.9em;
-    color: #888;
+section h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-/* Animaciones */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.7s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@keyframes glow {
-    from { text-shadow: 0 0 10px #00ffff; }
-    to { text-shadow: 0 0 25px #00ffff; }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-/* Recomendaciones */
-.recomendacion-card {
+.experiencia-card, .proyecto-card {
     background: #1a1a1a;
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
+    margin-bottom: 25px;
     box-shadow: 0 10px 30px rgba(255,255,255,0.1);
-    margin-bottom: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.recomendacion-card:hover {
+.experiencia-card:hover, .proyecto-card:hover {
     transform: scale(1.02);
     box-shadow: 0 15px 40px rgba(255,255,255,0.2);
 }
 
-.recomendacion-card strong {
-    color: #00ffff;
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
-/* Fade-in animation para todas las secciones */
+.proyecto-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#recomendacion p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+}
+
 .fade-in {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
+    animation: fadeIn 1s ease-in;
 }
 
 @keyframes fadeIn {
